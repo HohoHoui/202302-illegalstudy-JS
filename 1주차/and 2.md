@@ -282,3 +282,5 @@ function solution(N, X, arrA) {
 ![2023-09-20 010411](https://github.com/HohoHoui/202302-illegalstudy-JS/assets/97030768/93e8d8b1-3ade-44d7-9d8b-f8f285b0059a)
 
 **백준 문제 풀이 화면**
+<br/>
+![2023-09-20 010614](https://github.com/HohoHoui/202302-illegalstudy-JS/assets/97030768/7e98e5f3-19ac-4de4-bdae-3c8b1ee0ee47)
