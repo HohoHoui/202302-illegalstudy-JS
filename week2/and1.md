@@ -115,3 +115,48 @@ wind['1']; //10
 **단축평가에 대해 한번 예제 코드를 제외하고 코딩을 한번 시도해보시오.**
 
 **해당 단어나 기타 로직에 대해 뜻같은 거 다 조사해도 상관없음.**
+```JS
+//1. 서버 사용을 위해 http모듈을 http변수에 담음.(모듈과 변수의 이름은 달라도 됨)
+var http = require('http');
+
+//2. http 모듈로 서버를 생성.
+//서버를 생성한 후, 사용자로부터 http요청이 들어오면 function 블럭내부의 코드를 실행하여 응답한다.
+var server = http.createServer(function (request, response) { //request, response부분은 요청, 응답으로 한국어로 할 수도 있음.
+
+    response.writeHead(200, { 'Content-Type': 'text/html' }); //{}안은 키 : 값 형태 200 : 웹서버에 들어오는 요청에 대한 정상적으로 값을 리턴해주는 것
+    //서버 측에서 보내주는 컨텐츠의 타입이 텍스트이고, html 형태임을 알려줌
+    response.end('Hello hode.js!!'); //실제 코드 값을 end()함수로 전달하면 브라우저는 해당 컨텐츠를 받은 후 html을 해석하여 화면에 출력
+
+});
+
+//3. listen 함수로 8080포트를 가진 서버를 실행. 서버가 실행된 것을 콘솔창에서 확인하기 위한 로그 출력
+server.listen(8080, function () { //서버 시작
+    //console.log('Server is running...');
+});
+
+//https://plan2018.tistory.com/892
+
+const readline = require("readline"); //모듈 가져오기
+
+const rl = readline.createInterface({ //readline모듈을 이용해 입출력을 위한 인터페이스 객체 생성
+    input: process.stdin,
+    output: process.stdout,
+});
+
+var answer;
+var isHungry = answer;
+var hungry = '';
+
+rl.question("배가 고픈가요?(true or false)", (answer) => { //r변수 생성
+    if (answer == 'true') hungry = '배가 고프다.';
+    if (answer == 'false') hungry = '배가 안고프다.';
+    else hungry = '입력값이 true또는 false가 아닙니다.'
+    hungry = false || hungry;
+    console.log(hungry);
+    rl.close();
+});
+
+rl.on('close', () => { //입력이 끝난 후 실행코드
+    process.exit();
+})
+```
