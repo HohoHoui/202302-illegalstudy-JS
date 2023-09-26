@@ -160,4 +160,5 @@ rl.on('close', () => { //입력이 끝난 후 실행코드
     process.exit();
 })
 ```
-<출력문>
+<출력결과>
+![image](https://github.com/HohoHoui/202302-illegalstudy-JS/assets/97030768/3a7efd6e-e91d-4d05-9704-16996fb9fc96)
